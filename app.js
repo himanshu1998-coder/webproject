@@ -6,6 +6,7 @@ const path = require("path");
 const ejs = require("ejs");
 const mongoose = require("mongoose");
 const _ = require("lodash");
+const port = process.env.PORT || 3000;
 
 const app = express();
 
@@ -71,6 +72,6 @@ app.get("/thanku", (req, res) => {
   res.render("thanku");
 });
 
-app.listen(3000, function () {
+app.listen(port, function () {
   console.log("App Running at Port 3000");
 });
